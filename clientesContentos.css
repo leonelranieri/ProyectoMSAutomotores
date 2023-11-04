@@ -63,6 +63,14 @@ h1 {
     color: #e7e8ec;
 }
 
+h2 {
+    font-size: 34px;
+    margin: 0;
+    padding: 0;
+    color: rgb(7, 7, 7);
+    text-align: center;
+}
+
 div.gallery {
     margin: 10px; /* Aumenta el margen para agregar espacio entre las imágenes */
     border: 1px solid #0b1997;
