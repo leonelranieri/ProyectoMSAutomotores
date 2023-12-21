@@ -30,7 +30,8 @@
     <hr color="blue">
 
     <div class="contenedor-formulario">
-        <form action="javascript:;" onsubmit="enviar(this)" name="contacto" netlify>
+        <form action="https://formsubmit.co/leonelranieri0501@hotmail.com" method="POST" onsubmit="enviar(this)" name="contacto">
+        <!-- <form action="javascript:;" onsubmit="enviar(this)" name="contacto" netlify> -->
             <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" placeholder="Escribí aquí tu nombre" required minlength="3">
             <label for="apellido">Apellido: </label>
@@ -43,9 +44,9 @@
             <label for="comentario">Comentario: </label>
             <textarea name="comentario" id="comentario" placeholder="Escribí aquí tu comentario"></textarea>
             <label for="motivo">Motivo de contacto: </label>
-            <input type="radio" id="motivo" name="motivo" required><i>Consulta</i>
-            <input type="radio" id="motivo" name="motivo" required><i>Reclamo</i>
-            <input type="radio" id="motivo" name="motivo" required><i>Sugerencia</i>
+            <label><input type="radio" id="consulta" name="motivo" value="consulta" required>Consulta</label>
+            <label></label><input type="radio" id="reclamo" name="motivo" value="reclamo" required><i>Reclamo</label>
+            <label></label><input type="radio" id="sugerencias" name="motivo" value="sugerencias" required><i>Sugerencia</label>
 
             <input type="submit" value="Enviar" class="submit-btn">
             <button class="submit-btn limpiar-btn" onclick="resetForm()">Limpiar formulario</button>

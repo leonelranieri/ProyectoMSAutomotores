@@ -6,7 +6,8 @@ function enviar(form) {
     const Email = form.mail.value;
     const tel = form.telefono.value;
     const comentario = form.comentario.value;
-    const motivo_contacto = document.querySelector('input[name="motivo"]:checked').value;
+    const motivo_contacto_element = document.querySelector('input[name="motivo"]:checked');
+    const motivo_contacto = motivo_contacto_element ? motivo_contacto_element.value : '';
 
     
     
@@ -19,12 +20,35 @@ function enviar(form) {
             coment: comentario,
             motivo: motivo_contacto,
         }
+
+        // Enviar datos del formulario a través de una solicitud HTTP (fetch) 
+        /*fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams(param).toString(),
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert("Formulario enviado con éxito");
+                    console.log(param);
+                    resetForm();
+                } else {
+                    alert("Error al enviar el formulario");
+                }
+            })
+            .catch(error => {
+                console.error('Error en la solicitud:', error);
+                alert("Error al enviar el formulario");
+            }); 
+
+        return false; // Evitar que el formulario se envíe directamente*/
+
     
         alert("Formulario enviado con éxito");
-        console.log(param);
-        resetForm();
 
-        return param;
+        return true; 
     }
 
 }
