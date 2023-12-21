@@ -21,31 +21,6 @@ function enviar(form) {
             motivo: motivo_contacto,
         }
 
-        // Enviar datos del formulario a través de una solicitud HTTP (fetch) 
-        /*fetch('/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: new URLSearchParams(param).toString(),
-        })
-            .then(response => {
-                if (response.ok) {
-                    alert("Formulario enviado con éxito");
-                    console.log(param);
-                    resetForm();
-                } else {
-                    alert("Error al enviar el formulario");
-                }
-            })
-            .catch(error => {
-                console.error('Error en la solicitud:', error);
-                alert("Error al enviar el formulario");
-            }); 
-
-        return false; // Evitar que el formulario se envíe directamente*/
-
-    
         alert("Formulario enviado con éxito");
 
         return true; 
