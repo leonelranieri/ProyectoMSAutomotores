@@ -130,6 +130,12 @@ div.contenedor-formulario {
     background-color: #090450;
 }
 
+#contador {
+    color: red;
+    font-size: 12px; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+    text-align: right;
+}
+
 .footer {
     background-color: #000000;
     color: #FFF;

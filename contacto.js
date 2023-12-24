@@ -12,14 +12,14 @@ function enviar(form) {
     
     
     if (controlDeNumeros(tel) && validarNombreApellido(nombre) && validarNombreApellido(apellido)){
-        const param = {
+         const param = {
             nom: nombre,
             ape: apellido,
             email: Email,
             telef: tel,
             coment: comentario,
             motivo: motivo_contacto,
-        }
+        } 
 
         alert("Formulario enviado con éxito");
 
@@ -27,6 +27,7 @@ function enviar(form) {
     }
 
 }
+
 
 function controlDeNumeros(tel) {
        var telPattern = /^\d+$/;
@@ -52,4 +53,17 @@ function validarNombreApellido(valor) {
 
 function resetForm(){
     document.querySelector("form").reset();
+}
+
+function contarCaracteres() {
+    var comentario = document.getElementById('comentario').value;
+    var caracteresRestantes = 300 - comentario.length;
+
+    if (caracteresRestantes >= 0) {
+        document.getElementById('contador').textContent = 'Caracteres restantes: ' + caracteresRestantes;
+    } else {
+        // Si se supera el límite, puedes tomar medidas como deshabilitar el textarea o cambiar el estilo para indicar que se ha excedido.
+        document.getElementById('contador').textContent = '¡Límite de caracteres alcanzado!';
+    }
+
 }
