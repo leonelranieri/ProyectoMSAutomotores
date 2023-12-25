@@ -24,6 +24,8 @@ function enviar(form) {
         alert("Formulario enviado con éxito");
 
         return true; 
+    } else {
+        return false
     }
 
 }
